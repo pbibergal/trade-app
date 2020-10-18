@@ -1,0 +1,14 @@
+<button (click)="toggle()" mat-button class="toggle" [class.open]="isOpen">
+  <span class="material-icons">arrow_forward_ios</span>
+</button>
+
+<div *ngIf="isOpen">
+  <div class="bid">
+    <p>BID</p>
+    <div *ngFor="let item of bid">{{item}}</div>
+  </div>
+  <div class="ask">
+    <p>ASK</p>
+    <div *ngFor="let item of ask">{{item}}</div>
+  </div>
+</div>

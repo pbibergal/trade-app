@@ -1,0 +1,45 @@
+:host {
+  > div {
+    display: flex;
+    flex-direction: row;
+
+    > div {
+      flex: 1;
+
+      > div {
+        padding: 4px;
+        text-align: center;
+      }
+
+      p {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.bid {
+  > div {
+    background: aquamarine;
+  }
+}
+
+.ask {
+  > div {
+    background: indianred;
+  }
+}
+
+button {
+  display: none;
+
+  @media all and (max-width: 960px){
+    display: flex;
+  }
+
+  &.open {
+    span {
+      transform: rotate(90deg);
+    }
+  }
+}

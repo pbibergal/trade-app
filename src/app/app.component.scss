@@ -1,0 +1,42 @@
+section {
+  display: flex;
+
+  @media all and (max-width: 960px) {
+    flex-direction: column;
+    #main-events {
+      padding: 0;
+    }
+  }
+  @media all and (min-width: 961px) {
+    flex-direction: row;
+  }
+
+  > * {
+    flex: 1;
+  }
+}
+
+mat-card {
+  margin: 10px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+
+  .extra {
+    display: flex;
+    flex-direction: row;
+
+    > * {
+      flex: 1;
+    }
+  }
+}
+
+.logo {
+  width: 204px;
+  height: 50px;
+  mask-image: url('../assets/logo.png');
+  background: #fff;
+}

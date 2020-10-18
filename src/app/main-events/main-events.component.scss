@@ -1,0 +1,41 @@
+:host {
+  > div {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+    > * {
+      place-self: center;
+    }
+  }
+}
+
+table {
+  width: 100%;
+
+  .active {
+    background: #eee;
+  }
+}
+
+.player {
+  white-space: nowrap;
+}
+
+@media all and(max-width: 960px) {
+  :host {
+    > div {
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.player {
+  display: flex;
+
+  button {
+    width: 44px;
+    height: 44px;
+  }
+}

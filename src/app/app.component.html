@@ -1,0 +1,29 @@
+<mat-toolbar color="primary">
+  <span>
+    <div class="logo"></div>
+  </span>
+</mat-toolbar>
+<section>
+
+  <mat-card id="main-events">
+    <mat-card-content>
+      <app-main-events [isPlaying]="isPlayerPlaying" [currentEventId]="currentEventId"
+                       (rowSelect)="onRowSelect($event)"></app-main-events>
+    </mat-card-content>
+  </mat-card>
+
+  <div class="details">
+    <mat-card>
+      <mat-card-content>
+        <router-outlet></router-outlet>
+      </mat-card-content>
+    </mat-card>
+    <div class="extra">
+      <mat-card>
+        <mat-card-content>
+          <app-order-book [eventId]="currentEventId"></app-order-book>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</section>
